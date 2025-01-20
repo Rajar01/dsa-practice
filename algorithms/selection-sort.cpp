@@ -1,12 +1,5 @@
 #include <iostream>
 
-template <typename T>
-void swap(T& a, T& b) {
-	T temp = a;
-	a = b;
-	b = temp;
-}
-
 int main() {
 	int array[8] = {657, 860, 708, 871, 984, 399, 509, 532};
 	int currentMinIndex;
@@ -20,7 +13,7 @@ int main() {
 			}	
 		}
 
-		swap(array[i], array[currentMinIndex]);
+		std::swap(array[i], array[currentMinIndex]);
 	}
 
 	for(int i = 0; i < std::size(array); i++) {
